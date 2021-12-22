@@ -132,7 +132,7 @@ def parse_args() -> Namespace:
     return args
 
 
-def main():
+def main() -> None:
     # Parse the arguments
     args = parse_args()
     topology_data = load_yaml(args.topology)
@@ -177,12 +177,17 @@ def main():
             y=parsed_y(device["y"] - 5),
         )
         node.create()
-        time.sleep(3)
         print(f"Device created: {node.name}")
+        time.sleep(3)
 
     # Create the links
     for link in links_spec:
         lab.create_link(*link)
+
+    for node in lab.nodes:
+        node.start()
+        print(f"Device started: {node.name}")
+        time.sleep(3)
 
     # Summary
     print(heading("Nodes Summary"))
