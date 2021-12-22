@@ -16,10 +16,10 @@ from argparse import ArgumentParser, Namespace
 from gns3fy import Gns3Connector, Project, Node
 from tabulate import tabulate
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 
-def heading(message):
+def heading(message: str) -> str:
     """
     Returns a heading style text
     """

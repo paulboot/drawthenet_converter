@@ -1,2 +1,4 @@
 gns3fy
 tabulate
+types-tabulate
+types-PyYAML
