@@ -187,7 +187,7 @@ def main() -> None:
     for node in lab.nodes:
         node.start()
         print(f"Device started: {node.name}")
-        time.sleep(3)
+        time.sleep(15)
 
     # Summary
     print(heading("Nodes Summary"))
